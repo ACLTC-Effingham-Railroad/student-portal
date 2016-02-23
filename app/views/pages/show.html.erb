@@ -1,2 +1,18 @@
-<h1>Pages#show</h1>
-<p>Find me in app/views/pages/show.html.erb</p>
+<h1><%= "#{@page.first_name} #{@page.last_name}'s"%> Resume</h1>
+
+<hr>
+<h4>Email: <%= @page.email %></h4>
+<h4>Phone: <%= @page.phone_number %></h4>
+<h4>Short Bio: <%= @page.short_bio %></h4>
+<h4>LinkedIn: <%= @page.linkedin_url %></h4>
+<h4>Twitter: <%= @page.twitter_handle %></h4>
+<h4>Personal Blog: <%= @page.personal_blog_website_url %></h4>
+<h4>Online Resume: <%= @page.online_resume %></h4>
+<h4>Github: <%= @page.github_url %></h4>
+<h4><%= @page.photo %></h4>
+<hr>
+<% if current_user? %>
+<%= link_to "Edit", "/pages/#{page.id}/edit" %>
+
+
+

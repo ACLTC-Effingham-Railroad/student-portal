@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @pages = Unirest.get("").body
+    @page = Unirest.get("").body
   end
 
   def edit
