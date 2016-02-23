@@ -1,2 +1,46 @@
-<h1>Pages#edit</h1>
-<p>Find me in app/views/pages/edit.html.erb</p>
+<h1>Update your Resume</h1><%= form_tag "/pages/#{@pages.id}", method: :patch do %>
+ <div>
+   <%= label_tag :first_name %>
+   <%= text_field_tag :first_name, @pages.first_name %>
+ </div>
+ <div>
+   <%= label_tag :last_name %>
+   <%= text_field_tag :last_name, @pages.last_name %>
+ </div>
+ <div>
+   <%= label_tag :email %>
+   <%= text_field_tag :email, @pages.email %>
+ </div>
+ <div>
+   <%= label_tag :phone_number %>
+   <%= text_field_tag :phone_number, @pages.phone_number %>
+ </div>
+ <div>
+   <%= label_tag :short_bio %>
+   <%= text_field_tag :short_bio, @pages.short_bio %>
+ </div>
+ <div>
+   <%= label_tag :linkedin_url %>
+   <%= text_field_tag :linkedin_url, @pages.linkedin_url %>
+ </div>
+ <div>
+   <%= label_tag :twitter_handle %>
+   <%= text_field_tag :twitter_handle, @pages.twitter_handle %>
+ </div>
+ <div>
+   <%= label_tag :personal_blog_website_url %>
+   <%= text_field_tag :personal_blog_website_url, @pages.personal_blog_website_url %>
+ </div>
+ <div>
+   <%= label_tag :online_resume_url %>
+   <%= text_field_tag :online_resume_url, @pages.online_resume_url %>
+ </div>
+ <div>
+   <%= label_tag :github_url %>
+   <%= text_field_tag :github_url, @pages.github_url %>
+ </div>
+ <div>
+   <%= label_tag :photo %>
+   <%= text_field_tag :photo, @pages.photo %>
+ </div>  <%= submit_tag "Update Resume" %>
+<% end %>
