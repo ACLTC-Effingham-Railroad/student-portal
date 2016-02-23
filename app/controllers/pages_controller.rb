@@ -19,4 +19,6 @@ class PagesController < ApplicationController
 
     render :show
   end
+  
 end
+
